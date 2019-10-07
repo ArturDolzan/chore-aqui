@@ -5,11 +5,64 @@ import {
     CardTitle, 
     Table
 } from 'reactstrap'
+import MelhoresInstituicoes from './MelhoresInstituicoes/MelhoresInstituicoes'
+import MaisReclamadas from './MaisReclamadas/MaisReclamadas'
+import BuscaReclamar from './BuscaReclamar/BuscaReclamar'
+
+const melhores = [
+    {
+        Id: 1,
+        Nome: 'SATC - Associação Beneficente ...',
+        Ranking: 1,
+        Percentual: 'tem que ve%'
+    },
+    {
+        Id: 2,
+        Nome: 'UNESC',
+        Ranking: 2,
+        Percentual: '50%'
+    },
+    {
+        Id: 3,
+        Nome: 'ESUCRI',
+        Ranking: 3,
+        Percentual: '25%'
+    }
+]
+
+const maisReclamadas = [
+    {
+        Id: 1,
+        Nome: 'SATC - Associação Beneficente ...',
+        QtdeReclamacoes: 115445,
+        QtdeRespondidas: 50
+    },
+    {
+        Id: 2,
+        Nome: 'UNESC',
+        QtdeReclamacoes: 150,
+        QtdeRespondidas: 5
+    },
+    {
+        Id: 3,
+        Nome: 'ESUCRI',
+        QtdeReclamacoes: 100,
+        QtdeRespondidas: 50
+    }
+]
 
 class Reclamar extends React.Component {
 
-    clickGrid(event){
-        alert('teste')
+    constructor(props){
+        super(props)
+    }
+
+    clickMaisReclamadas(item){
+        
+    }
+
+    clickMelhores(item){
+        
     }
 
     render(){
@@ -25,70 +78,17 @@ class Reclamar extends React.Component {
                     transitionLeave={false}>
                     
                     <Row>
-                        <Col md="6">
-                            <Card className="main-card mb-3">
-                                <CardBody>
-                                    <CardTitle>Melhores Universidades</CardTitle>
-                                    
-                                    <Table striped className="mb-0">
-                                        <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr onClick={(e) => this.clickGrid(e)} style={{cursor: 'pointer'}}>
-                                            <th scope="row">1</th>
-                                            <td>SATC - Associação Beneficente ...</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Unesc</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Esucri</td>
-                                        </tr>
-                                        </tbody>
-                                    </Table>
 
-                                </CardBody>
-                            </Card>
-                            
+                        <Col md="12">
+                            <BuscaReclamar/>
                         </Col>
 
                         <Col md="6">
-                            <Card className="main-card mb-3">
-                                <CardBody>
-                                    <CardTitle>Universidades + Reclamadas</CardTitle>
-                                    
-                                    <Table striped className="mb-0">
-                                        <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Nome</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>SATC - Associação Beneficente ...</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>Unesc</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>Esucri</td>
-                                        </tr>
-                                        </tbody>
-                                    </Table>
+                            <MelhoresInstituicoes dados={melhores} onClickMelhores={this.clickMelhores}/>                            
+                        </Col>
 
-                                </CardBody>
-                            </Card>
-                            
+                        <Col md="6">                            
+                            <MaisReclamadas dados={maisReclamadas} onClickMaisReclamadas={this.clickMaisReclamadas}/>                            
                         </Col>
                     </Row>
                 </ReactCSSTransitionGroup>

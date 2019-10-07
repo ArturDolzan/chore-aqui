@@ -1,5 +1,36 @@
 @charset "UTF-8";
 
+.containerBuscaReclamar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.containerBuscaReclamarCentralizado {
+  width: 900px;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buscaReclamar-holder {
+  margin-left: 10px;
+}
+
+.buscaReclamar-botao {
+  margin-left: 5px;
+}
+
+.tablesReclamar {
+  cursor: pointer;
+}
+
+.tablesReclamar:hover {
+  background-color: #e4f2f9;
+}
+
 @media all and (min-width: 480px) {
   .Login {
     padding: 60px 0;
