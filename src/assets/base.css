@@ -1479,10 +1479,10 @@ pre {
   .table th,
   .table td {
     padding: 0.55rem;
-    vertical-align: top;
+    vertical-align: baseline;
     border-top: 1px solid #e9ecef; }
   .table thead th {
-    vertical-align: bottom;
+    vertical-align: middle;
     border-bottom: 2px solid #e9ecef; }
   .table tbody + tbody {
     border-top: 2px solid #e9ecef; }

@@ -8,25 +8,33 @@ import {
 import MelhoresInstituicoes from './MelhoresInstituicoes/MelhoresInstituicoes'
 import MaisReclamadas from './MaisReclamadas/MaisReclamadas'
 import BuscaReclamar from './BuscaReclamar/BuscaReclamar'
+import UltimasReclamacoes from './UltimasReclamacoes/UltimasReclamacoes'
+
+import avatar1 from '../../../assets/utils/images/avatars/logoSatc.png';
+import avatar2 from '../../../assets/utils/images/avatars/logoUnesc.png';
+import avatar3 from '../../../assets/utils/images/avatars/logoEsucri.png';
 
 const melhores = [
     {
         Id: 1,
-        Nome: 'SATC - Associação Beneficente ...',
+        Nome: 'Associação Beneficente da Indústria Carbonífera de Santa Catarina',
         Ranking: 1,
-        Percentual: 'tem que ve%'
+        Percentual: 'tem que ve%',
+        Logo: avatar1
     },
     {
         Id: 2,
         Nome: 'UNESC',
         Ranking: 2,
-        Percentual: '50%'
+        Percentual: '50%',
+        Logo: avatar2
     },
     {
         Id: 3,
         Nome: 'ESUCRI',
         Ranking: 3,
-        Percentual: '25%'
+        Percentual: '25%',
+        Logo: avatar3
     }
 ]
 
@@ -35,19 +43,22 @@ const maisReclamadas = [
         Id: 1,
         Nome: 'SATC - Associação Beneficente ...',
         QtdeReclamacoes: 115445,
-        QtdeRespondidas: 50
+        QtdeRespondidas: 50,
+        Logo: avatar1
     },
     {
         Id: 2,
         Nome: 'UNESC',
         QtdeReclamacoes: 150,
-        QtdeRespondidas: 5
+        QtdeRespondidas: 5,
+        Logo: avatar2
     },
     {
         Id: 3,
         Nome: 'ESUCRI',
         QtdeReclamacoes: 100,
-        QtdeRespondidas: 50
+        QtdeRespondidas: 50,
+        Logo: avatar3
     }
 ]
 
@@ -83,12 +94,16 @@ class Reclamar extends React.Component {
                             <BuscaReclamar/>
                         </Col>
 
-                        <Col md="6">
-                            <MelhoresInstituicoes dados={melhores} onClickMelhores={this.clickMelhores}/>                            
+                        <Col md="4">
+                            <MelhoresInstituicoes dados={melhores} onClickMelhores={this.clickMelhores}/>
                         </Col>
 
-                        <Col md="6">                            
-                            <MaisReclamadas dados={maisReclamadas} onClickMaisReclamadas={this.clickMaisReclamadas}/>                            
+                        <Col md="4">
+                            <UltimasReclamacoes/>
+                        </Col>
+
+                        <Col md="4">
+                            <MaisReclamadas dados={maisReclamadas} onClickMaisReclamadas={this.clickMaisReclamadas}/>
                         </Col>
                     </Row>
                 </ReactCSSTransitionGroup>

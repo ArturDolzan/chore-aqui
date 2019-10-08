@@ -19,6 +19,7 @@ class MaisReclamadas extends React.Component {
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th></th>
                                     <th>Nome</th>
                                     <th>Qtd Reclamações</th>
                                     <th>Qtd Respondidas</th>
@@ -30,6 +31,7 @@ class MaisReclamadas extends React.Component {
                                 {this.props.dados.map((item, idx) => {
                                     return <tr key={item.Id} className="tablesReclamar" onClick={() => {this.props.onClickMaisReclamadas(item)}}>
                                                 <th scope="row">{item.Id}</th>
+                                                <td><img width={40} className="rounded-circle" src={item.Logo} alt=""/></td>
                                                 <td>{item.Nome}</td>
                                                 <td>{item.QtdeReclamacoes}</td>
                                                 <td>{item.QtdeRespondidas}</td>

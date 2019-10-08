@@ -19,6 +19,7 @@ class MelhoresInstituicoes extends React.Component {
                             <thead>
                                 <tr>
                                     <th>#</th>
+                                    <th></th>
                                     <th>Nome</th>
                                     <th>% Satisfação</th>
                                 </tr>
@@ -28,6 +29,7 @@ class MelhoresInstituicoes extends React.Component {
                                 {this.props.dados.map((item, idx) => {
                                     return <tr key={item.Id} className="tablesReclamar" onClick={() => {this.props.onClickMelhores(item)}}>
                                                 <th scope="row">{item.Ranking}</th>
+                                                <td><img width={40} className="rounded-circle" src={item.Logo} alt=""/></td>
                                                 <td>{item.Nome}</td>
                                                 <td>{item.Percentual}</td>
                                             </tr>

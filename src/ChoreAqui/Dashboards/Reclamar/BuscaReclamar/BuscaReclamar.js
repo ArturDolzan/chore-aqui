@@ -10,7 +10,7 @@ class BuscaReclamar extends React.Component {
         return (
             <Fragment>
                 <Card className="main-card mb-3">
-                    <CardBody>                        
+                    <CardBody>
                         
                         <div className="containerBuscaReclamar">
                             <div className="containerBuscaReclamarCentralizado">
