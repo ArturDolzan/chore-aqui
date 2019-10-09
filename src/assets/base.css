@@ -1,5 +1,14 @@
 @charset "UTF-8";
 
+.containerBuscaReclamarFlex {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .containerBuscaReclamar {
   display: flex;
   justify-content: center;
@@ -21,6 +30,14 @@
 
 .buscaReclamar-botao {
   margin-left: 5px;
+}
+
+.buscaReclamar-botao:hover {
+  transform: scale(1.1);
+}
+
+.buscaReclamar-minHeight {
+  min-height: 200px;
 }
 
 .tablesReclamar {

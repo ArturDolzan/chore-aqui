@@ -9,8 +9,8 @@ class BuscaReclamar extends React.Component {
 
         return (
             <Fragment>
-                <Card className="main-card mb-3">
-                    <CardBody>
+                <Card className="main-card mb-3 buscaReclamar-minHeight" >
+                    <CardBody className="containerBuscaReclamarFlex">
                         
                         <div className="containerBuscaReclamar">
                             <div className="containerBuscaReclamarCentralizado">
