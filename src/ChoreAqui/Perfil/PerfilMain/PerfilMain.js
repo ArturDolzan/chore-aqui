@@ -1,6 +1,7 @@
 import React, {Fragment} from 'react'
 
 import PerfilHeader from '../PerfilHeader/PerfilHeader'
+import PerfilBody from '../PerfilBody/PerfilBody'
 import {Row, Col} from 'reactstrap'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
@@ -25,21 +26,10 @@ class PerfilMain extends React.Component {
                             <PerfilHeader/>
                         </Col>
 
-                        <Col md="3">
-                            1
+                        <Col md="12">
+                            <PerfilBody/>
                         </Col>
 
-                        <Col md="3">
-                            2
-                        </Col>
-
-                        <Col md="3">
-                            3
-                        </Col>
-
-                        <Col md="3">
-                            4
-                        </Col>
                     </Row>
                 </ReactCSSTransitionGroup>
 

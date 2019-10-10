@@ -1,4 +1,11 @@
 import React, {Fragment} from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import {Row, Col, Card, CardBody, Button, Label} from 'reactstrap'
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faBullhorn} from '@fortawesome/free-solid-svg-icons'
+
+import avatar1 from '../../../assets/utils/images/avatars/nouser.png'
 
 class PerfilHeader extends React.Component {
 
@@ -6,7 +13,51 @@ class PerfilHeader extends React.Component {
 
         return (
             <Fragment>
-                Header
+                <ReactCSSTransitionGroup
+                    component="div"
+                    transitionName="TabsAnimation"
+                    transitionAppear={true}
+                    transitionAppearTimeout={0}
+                    transitionEnter={false}
+                    transitionLeave={false}>
+                    
+                    <Card className="main-card mb-12">
+                        <CardBody>
+
+                            <Row>
+                                <Col md="4">
+                                    
+                                </Col>
+
+                                <Col md="4">
+                                    <div className="containerPerfilHeaderAvatar">
+                                        <img width={180} className="rounded-circle" src={avatar1} alt=""/>                                        
+                                    </div>
+
+                                    <div className="containerPerfilHeaderTitulo">
+                                        <h5 className="card-title">Nome da Instituição de ensino cadastrada em nossa base de dados</h5>
+                                    </div>
+
+                                    <div className="containerPerfilHeaderSubTitulo">
+                                        <span>Detalhes da instituição</span>
+                                    </div>
+                                </Col>
+
+                                <Col md="4" >
+
+                                    <div className="containerPerfilHeaderBotaoReclamar">
+                                        <Button className="btn-lg btn-danger" >
+                                            <FontAwesomeIcon className="ml-2 opacity-8 fa-lg" icon={faBullhorn}/> 
+                                            <Label className="containerPerfilHeaderBotaoReclamarLabel">Reclamar</Label>
+                                        </Button>                                    
+                                    </div>
+                                </Col>
+                            </Row>
+
+                        </CardBody>
+                    </Card>
+
+                </ReactCSSTransitionGroup>
             </Fragment>
         )
     }

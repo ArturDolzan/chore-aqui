@@ -1,5 +1,36 @@
 @charset "UTF-8";
 
+.containerPerfilHeaderBotaoReclamarLabel{
+  padding-left: 15px;
+  padding-top: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.containerPerfilHeaderBotaoReclamar {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerPerfilHeaderTitulo {
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.containerPerfilHeaderSubTitulo {
+  display: flex;
+  justify-content: center;
+}
+
+.containerPerfilHeaderAvatar {
+  display: flex;
+  justify-content: center;
+}
+
 .containerBuscaReclamarFlex {
   height: 100%;
   padding: 0;

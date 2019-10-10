@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import { withRouter } from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {
     Col, Row, Card, CardBody,
@@ -70,10 +71,12 @@ class Reclamar extends React.Component {
 
     clickMaisReclamadas(item){
         
+        this.props.history.push(`perfil/${item.Id}`)
     }
 
     clickMelhores(item){
         
+        this.props.history.push(`perfil/${item.Id}`)
     }
 
     render(){
@@ -95,7 +98,7 @@ class Reclamar extends React.Component {
                         </Col>
 
                         <Col md="4">
-                            <MelhoresInstituicoes dados={melhores} onClickMelhores={this.clickMelhores}/>
+                            <MelhoresInstituicoes dados={melhores} onClickMelhores={(item) => this.clickMelhores(item)}/>
                         </Col>
 
                         <Col md="4">
@@ -103,7 +106,7 @@ class Reclamar extends React.Component {
                         </Col>
 
                         <Col md="4">
-                            <MaisReclamadas dados={maisReclamadas} onClickMaisReclamadas={this.clickMaisReclamadas}/>
+                            <MaisReclamadas dados={maisReclamadas} onClickMaisReclamadas={(item) => this.clickMaisReclamadas(item)}/>
                         </Col>
                     </Row>
                 </ReactCSSTransitionGroup>
@@ -112,4 +115,4 @@ class Reclamar extends React.Component {
     }
 }
 
-export default Reclamar
+export default withRouter(Reclamar)
