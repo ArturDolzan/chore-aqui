@@ -1,9 +1,7 @@
 import React, {Fragment} from 'react'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import {Row, Col, Card, CardBody, Button, Label} from 'reactstrap'
-
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBullhorn} from '@fortawesome/free-solid-svg-icons'
+import {Row, Col, Card, CardBody} from 'reactstrap'
+import BotaoReclamar from '../../../Core/BotaoReclamar/BotaoReclamar'
 
 import avatar1 from '../../../assets/utils/images/avatars/nouser.png'
 
@@ -45,12 +43,8 @@ class PerfilHeader extends React.Component {
 
                                 <Col md="4" >
 
-                                    <div className="containerPerfilHeaderBotaoReclamar">
-                                        <Button className="btn-lg btn-danger" >
-                                            <FontAwesomeIcon className="ml-2 opacity-8 fa-lg" icon={faBullhorn}/> 
-                                            <Label className="containerPerfilHeaderBotaoReclamarLabel">Reclamar</Label>
-                                        </Button>                                    
-                                    </div>
+                                    <BotaoReclamar/>
+                                    
                                 </Col>
                             </Row>
 
