@@ -26,7 +26,7 @@ class PerfilMain extends React.Component {
                             <PerfilHeader/>
                         </Col>
 
-                        <Col md="12">
+                        <Col md="12" style={{paddingTop: "8px"}}>
                             <PerfilBody/>
                         </Col>
 

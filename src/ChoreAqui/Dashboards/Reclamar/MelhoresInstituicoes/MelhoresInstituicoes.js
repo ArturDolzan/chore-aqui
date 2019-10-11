@@ -11,7 +11,7 @@ class MelhoresInstituicoes extends React.Component {
 
         return (
             <Fragment>
-                <Card className="main-card mb-3">
+                <Card className="main-card mb-2">
                     <CardBody>
                         <CardTitle>Melhores Instituições</CardTitle>
                         
