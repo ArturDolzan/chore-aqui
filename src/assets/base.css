@@ -1,11 +1,27 @@
 @charset "UTF-8";
 
+.containerPerfilBodyResumoTabAvatar {
+  display: flex;
+  justify-content: center;
+}
+
+.containerPerfilBodyResumoTabTituloAvatar {
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
 .containerPerfilHeaderBotaoReclamarLabel{
   padding-left: 15px;
   padding-top: 3px;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.labelPerfilHeaderBotaoReclamarLabel{
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .containerPerfilHeaderBotaoReclamar {

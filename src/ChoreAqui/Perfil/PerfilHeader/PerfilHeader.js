@@ -29,7 +29,7 @@ class PerfilHeader extends React.Component {
 
                                 <Col md="4">
                                     <div className="containerPerfilHeaderAvatar">
-                                        <img width={180} className="rounded-circle" src={avatar1} alt=""/>                                        
+                                        <img width={180} className="rounded-circle" src={avatar1} alt=""/>
                                     </div>
 
                                     <div className="containerPerfilHeaderTitulo">
