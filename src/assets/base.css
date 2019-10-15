@@ -11,6 +11,16 @@
   padding-top: 5px;
 }
 
+.labelPerfilBodyResumoTabSubTituloAvatar {
+  font-size: 24px;
+  font-weight: bold;  
+}
+
+.labelPerfilBodyResumoTabSubTituloEstrelaAvatar {
+  margin-top: 2px;
+  color: #FFB400;  
+}
+
 .containerPerfilHeaderBotaoReclamarLabel{
   padding-left: 15px;
   padding-top: 3px;
@@ -21,7 +31,7 @@
 
 .labelPerfilHeaderBotaoReclamarLabel{
   font-weight: bold;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .containerPerfilHeaderBotaoReclamar {

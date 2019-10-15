@@ -5,9 +5,22 @@ import {Row, Col, Label} from 'reactstrap'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faStar} from '@fortawesome/free-solid-svg-icons'
 
-import avatar1 from '../../../../assets/utils/images/avatars/1.jpg'
+import avatar1 from '../../../../assets/utils/images/avatars/happy.jpg'
 
 class PerfilBodyResumoTab extends React.Component {
+
+	constructor(props){
+		super(props)		
+
+		this.state = {
+			qtdeEstrelasSatisfacaoGeral: 4,
+			qtdeEstrelasQualidadeDoEnsino: 3,
+			qtdeEstrelasEstruturaFisica: 2,
+			qtdeEstrelasCoordenacoes: 2,
+			qtdeEstrelasProfessores: 1,
+			mediaEstrelas: 4.6
+		}
+	}
 
     render(){
 
@@ -25,8 +38,8 @@ class PerfilBodyResumoTab extends React.Component {
 						</div>
 
 						<div className="containerPerfilBodyResumoTabTituloAvatar">
-							<Label>Média 4.6</Label>
-							<FontAwesomeIcon className="ml-2 fa-lg" icon={faStar}/>
+							<Label className="labelPerfilBodyResumoTabSubTituloAvatar">4.6</Label>
+							<FontAwesomeIcon className="ml-2 fa-lg labelPerfilBodyResumoTabSubTituloEstrelaAvatar" icon={faStar}/>
 						</div>
 					</Col>
 
@@ -41,8 +54,9 @@ class PerfilBodyResumoTab extends React.Component {
 
 							<Row>
 								<Col md="3">
-									<Rating value={5}
+									<Rating value={this.state.qtdeEstrelasSatisfacaoGeral}
 									name="estrelasSatisfacaoGeral"
+									readOnly
 									/>
 								</Col>
 							</Row>
@@ -57,8 +71,9 @@ class PerfilBodyResumoTab extends React.Component {
 
 							<Row>
 								<Col md="3">
-									<Rating value={3}
+									<Rating value={this.state.qtdeEstrelasQualidadeDoEnsino}
 									name="estrelasQualidadeDoEnsino"
+									readOnly
 									/>
 								</Col>
 							</Row>
@@ -73,8 +88,9 @@ class PerfilBodyResumoTab extends React.Component {
 
 							<Row>
 								<Col md="3">
-									<Rating value={4}
+									<Rating value={this.state.qtdeEstrelasEstruturaFisica}
 									name="estrelasEstruturaFisica"
+									readOnly
 									/>
 								</Col>
 							</Row>
@@ -89,8 +105,9 @@ class PerfilBodyResumoTab extends React.Component {
 
 							<Row>
 								<Col md="3">
-									<Rating value={2}
+									<Rating value={this.state.qtdeEstrelasCoordenacoes}
 									name="estrelasCoordenacoes"
+									readOnly								
 									/>
 								</Col>
 							</Row>
@@ -105,8 +122,9 @@ class PerfilBodyResumoTab extends React.Component {
 
 							<Row>
 								<Col md="3">
-									<Rating value={1}
+									<Rating value={this.state.qtdeEstrelasProfessores}
 									name="estrelasProfessores"
+									readOnly									
 									/>
 								</Col>
 							</Row>
