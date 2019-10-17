@@ -3,7 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import {Row, Col, Card, CardBody} from 'reactstrap'
 import BotaoReclamar from '../../../Core/BotaoReclamar/BotaoReclamar'
 
-import avatar1 from '../../../assets/utils/images/avatars/nouser.png'
+import avatar1 from '../../../assets/utils/images/avatars/logoUnesc.png'
 
 class PerfilHeader extends React.Component {
 

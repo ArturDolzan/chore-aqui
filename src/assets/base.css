@@ -8080,8 +8080,9 @@ button,
   align-items: center;
   transition: width .2s; }
   .app-header__logo .logo-src {
-    height: 23px;
-    width: 97px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;    
     background-repeat: round !important;
     background: url("~assets/utils/images/logo-inverse.png"); }
 
