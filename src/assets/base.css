@@ -8113,7 +8113,7 @@ button,
   .header-btn-lg .hamburger-inner::after {
     background: #868e96; }
 
-.app-header.header-text-light .app-header__logo {
+.app-header.header-text-light {
   background: rgba(255, 255, 255, 0.1); }
 .app-header.header-text-light .app-header-left > .nav > li > .nav-link {
   color: rgba(255, 255, 255, 0.7); }
@@ -8578,8 +8578,12 @@ button,
 .app-theme-white .app-footer .app-footer__inner,
 .app-theme-white .app-header {
   background: #fafbfc; }
-.app-theme-white.fixed-header .app-header__logo {
-  background: rgba(250, 251, 252, 0.1); }
+/* .app-theme-white.fixed-header .app-header__logo {
+  background: rgba(250, 251, 252, 0.1); } */
+
+.app-header__logo-displayBlock {
+  display: block !important;
+}
 
 .app-footer {
   height: 60px; }

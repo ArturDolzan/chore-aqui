@@ -48,7 +48,7 @@ class HeaderLogo extends React.Component {
         return (
             <Fragment>
                 <Link to="/">
-                    <div className="app-header__logo">
+                    <div className="app-header__logo app-header__logo-displayBlock">
                         <div className="logo-src"/>
                         {/* <div className="header__pane ml-auto">
                             <div onClick={this.toggleEnableClosedSidebar}>
